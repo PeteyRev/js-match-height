@@ -1,0 +1,34 @@
+body {
+  background: grey;
+}
+
+.list,
+.list-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list div {
+  position: relative;
+  border: 1px solid pink;
+  margin: .5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.list-2 div {
+  position: relative;
+  border: 1px solid blue;
+  margin: .5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .list div {
+    position: relative;
+    border: 1px solid pink;
+    margin: .5rem;
+    width: 42%;
+  }
+}
