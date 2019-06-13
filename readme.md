@@ -1,6 +1,6 @@
 # js-match-height
 
-Dependency-free vanilla js plugin to match element heights, with a few extras.
+Dependency-free vanilla js plugin to match element heights, in a tiny file (2kb).
 
 ## Getting Started
 

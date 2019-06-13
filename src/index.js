@@ -1,16 +1,16 @@
-(function () {
 
-  // constructor function
-  this.MatchHeight = function ($el, opts) {
+
+export class MatchHeight {
+  constructor($el, opts) {
     this.defaults = {
       timeout: 250
     }
     this.options = Object.assign(this.defaults, opts);
     this.$els = document.querySelectorAll($el);
     this.$elsArray = Array.prototype.slice.call(this.$els);
-    getAndSet(this.$elsArray);
-    this.debounceHeight = debounce(() => {
-      getAndSet(this.$elsArray);
+    this.getAndSet(this.$elsArray);
+    this.debounceHeight = this.debounce(() => {
+      this.getAndSet(this.$elsArray);
       console.log(this.defaults.timeout)
     }, this.options.timeout);
     window.addEventListener('resize', () => {
@@ -18,9 +18,7 @@
     });
   }
 
-
-  // Private Methods
-  const getAndSet = ($elsArray) => {
+  getAndSet($elsArray)  {
     for (const $el of $elsArray) {
       $el.removeAttribute('style');
     }
@@ -30,7 +28,7 @@
     }
   };
 
-  const debounce = (func, wait, immediate) => {
+  debounce(func, wait, immediate) {
     let timeout;
     return () => {
       const context = this;
@@ -46,7 +44,4 @@
     };
   };
 
-  // make accessible globally
-  window.MatchHeight = MatchHeight;
-
-})();
+}
