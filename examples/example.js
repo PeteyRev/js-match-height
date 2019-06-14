@@ -1,6 +1,5 @@
 
 const { MatchHeight } = require('../lib');
 
-const val = new MatchHeight('.div');
-
-console.log(val)
+const el1 = new MatchHeight('div.block');
+const el2 = new MatchHeight('ul li');
