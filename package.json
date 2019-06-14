@@ -1,6 +1,6 @@
 {
   "name": "js-match-height",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./lib/index.js",
   "repository": "https://github.com/PeteyRev/js-match-height",
   "scripts": {
